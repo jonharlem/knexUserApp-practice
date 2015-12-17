@@ -1,7 +1,7 @@
 //tell knex what environment I'm in
 
 //process is an obj available to us in a Node runtime
-var env = process.env.NODE_ENV || 'development';
+var env = process.env.NODE_ENV || 'development'; //env === 'development'
 
 //config will bring in knex file
 var config = require("../knexfile")[env]; //when you need to evaluate something use bracket notation

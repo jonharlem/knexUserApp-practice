@@ -1,11 +1,13 @@
 var express = require('express');
 var app = express();
 var bodyParser = require("body-parser");
-var userRoutes = require("./"); //if you don't specify a relative path, node goes straight to node_modules
+var userRoutes = require("./controllers/users.js"); //if you don't specify a relative path, node goes straight to node_modules
 
 //middleware
 
-app.get("view engine", "ejs");
+//app.set
+app.set("view engine", "ejs");
+//middleware uses app.use
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
